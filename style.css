@@ -1,0 +1,49 @@
+*{box-sizing:border-box}
+:root{--bg:#f4f1ef;--ink:#202026;--muted:#7e7980;--accent:#c94f79;--white:#fff}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif}
+body{background:radial-gradient(circle at 10% 5%,#fff 0,transparent 32%),radial-gradient(circle at 90% 90%,#ebe5ed 0,transparent 38%),#f4f1ef}
+.app{width:min(100%,760px);min-height:100vh;margin:auto;padding:18px 14px 42px}
+.screen{display:none;min-height:calc(100vh - 60px);padding:28px 0}
+.screen.active{display:block}
+#start{display:none;text-align:center;align-items:center;justify-content:center;flex-direction:column}
+#start.active{display:flex}
+.eyebrow{font-size:10px;letter-spacing:.2em;font-weight:800;color:var(--muted)}
+h1{font-size:clamp(43px,11vw,76px);line-height:1.02;letter-spacing:-.06em;margin:25px 0 22px}
+h1 em{font-style:normal;color:var(--accent)}
+h2{font-size:clamp(25px,6vw,37px);line-height:1.1;letter-spacing:-.045em;margin:7px 0 0}
+.lead{font-size:15px;line-height:1.9;color:#625d64}
+.notice{font-size:10px;color:#aaa;margin:25px 0}
+.primary{width:min(100%,430px);padding:16px 22px;border:0;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;box-shadow:0 8px 22px #0002}
+.primary:disabled{opacity:.32}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.pill{background:#fff;border-radius:999px;padding:9px 13px;font-size:12px;box-shadow:0 4px 16px #0000000c;white-space:nowrap}
+.pill b{font-size:18px}
+.sub{font-size:12px;color:var(--muted);margin:12px 0 18px}
+.center{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{background:#fff;border:3px solid transparent;border-radius:17px;overflow:hidden;box-shadow:0 4px 15px #0000000b;transition:.15s}
+.card.selected{border-color:var(--accent);transform:translateY(-2px)}
+.card button{width:100%;padding:0;border:0;background:#fff;text-align:left}
+.card img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.info{padding:8px 9px 10px}
+.name{font-weight:800;font-size:12px}
+.unit{font-size:9px;color:#aaa;margin-top:3px}
+.sticky{position:sticky;bottom:9px;padding-top:14px;background:linear-gradient(transparent,var(--bg) 35%)}
+.battle{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.battleCard{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 24px #00000012}
+.battleCard button{border:0;background:#fff;width:100%;padding:0}
+.battleCard img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.battleName{text-align:center;padding:14px 8px;font-weight:800}
+.skip{display:block;border:0;background:transparent;color:var(--muted);margin:16px auto;padding:8px 18px;font-size:12px}
+.results{display:grid;gap:9px;margin:22px 0}
+.result{display:grid;grid-template-columns:42px 66px 1fr;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:8px 11px;box-shadow:0 3px 14px #0000000b}
+.rankNo{text-align:center;font-size:21px;font-weight:900}
+.result img{width:66px;height:66px;object-fit:cover;border-radius:11px}
+.resultName{font-size:14px;font-weight:800}
+.resultUnit{font-size:10px;color:#aaa;margin-top:3px}
+.copied{text-align:center;color:var(--accent);font-size:11px;height:16px}
+.copyright{text-align:center;color:#aaa;font-size:9px;line-height:1.7;margin-top:30px}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}.app{padding-left:10px;padding-right:10px}.battle{gap:8px}.result{grid-template-columns:34px 56px 1fr}.result img{width:56px;height:56px}}
+
+.officeTitle{grid-column:1/-1;margin:22px 0 2px;font-size:1.15rem;border-bottom:2px solid currentColor;padding:8px 2px}
+.unitTitle{grid-column:1/-1;margin:10px 0 0;font-size:.82rem;letter-spacing:.08em;opacity:.75;padding:5px 2px}
